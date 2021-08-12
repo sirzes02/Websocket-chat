@@ -1,0 +1,23 @@
+{
+  "name": "websocket-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/index.js --exec babel-node --ignore src/public",
+    "build": "bable src -d dist && ncp src/public/index.html dist/public/index.html  && ncp src/public/main.css dist/public/main.css"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.15.0",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "ncp": "^2.0.0",
+    "socket.io": "^4.1.3",
+    "uuid": "^8.3.2"
+  }
+}
